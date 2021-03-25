@@ -1,5 +1,5 @@
 {
-  "name": "@didomi/react-output-target",
+  "name": "@didomi/stencil-react-output-target",
   "version": "0.1.1",
   "description": "This is an output plugin for stencil.",
   "main": "dist/index.cjs.js",
@@ -60,5 +60,5 @@
     ],
     "testURL": "http://localhost"
   },
-  "gitHead": "6943a7482762be95c0906122ac6859f492935323"
+  "gitHead": "cb5fae21b38392f51eba97edc76d6e009d56b3ab"
 }
