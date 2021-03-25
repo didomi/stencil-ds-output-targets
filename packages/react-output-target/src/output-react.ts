@@ -75,7 +75,6 @@ const createComponentDefinition = (tagNameModifier: TagNameModifier) => (
   cmpMeta: ComponentCompilerMeta,
 ) => {
   const tagNameAsPascal = dashToPascalCase(cmpMeta.tagName);
-
   return [
     `export const ${tagNameAsPascal} = /*@__PURE__*/createReactComponent<${IMPORT_TYPES}.${tagNameAsPascal}, HTML${tagNameAsPascal}Element>('${tagNameModifier(
       cmpMeta.tagName,

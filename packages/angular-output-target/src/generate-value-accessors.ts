@@ -102,6 +102,7 @@ function copyResources(config: Config, resourcesFilesToCopy: string[], directory
   return config.sys.copy(copyTasks, path.join(directory));
 }
 
+
 const VALUE_ACCESSOR_SELECTORS = `<VALUE_ACCESSOR_SELECTORS>`;
 const VALUE_ACCESSOR_EVENT = `<VALUE_ACCESSOR_EVENT>`;
 const VALUE_ACCESSOR_TARGETATTR = '<VALUE_ACCESSOR_TARGETATTR>';
