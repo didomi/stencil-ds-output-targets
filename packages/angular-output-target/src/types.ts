@@ -5,7 +5,6 @@ export interface OutputTargetAngular {
   directivesUtilsFile?: string;
   valueAccessorConfigs?: ValueAccessorConfig[];
   excludeComponents?: string[];
-  // @deprecated
   tagNameModifier: TagNameModifier;
 }
 
