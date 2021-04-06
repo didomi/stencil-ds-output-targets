@@ -23,7 +23,8 @@ export function normalizeOutputTarget(config: Config, outputTarget: any) {
   const results: OutputTargetAngular = {
     ...outputTarget,
     excludeComponents: outputTarget.excludeComponents || [],
-    valueAccessorConfig: outputTarget.valueAccessorConfig || [],
+    valueAccessorConfigs: outputTarget.valueAccessorConfigs || [],
+    tagNameModifier: outputTarget.tagNameModifier ?? ((tagName: string) => tagName),
   };
 
   if (config.rootDir == null) {
