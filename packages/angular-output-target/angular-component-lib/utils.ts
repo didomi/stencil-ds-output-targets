@@ -1,4 +1,4 @@
-import { EventEmitter} from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 export const proxyInputs = (Cmp: any, inputs: string[]) => {
   const Prototype = Cmp.prototype;
