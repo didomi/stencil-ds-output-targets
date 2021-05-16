@@ -5,13 +5,14 @@ import type { PackageJSON } from './types';
 
 const readFile = promisify(fs.readFile);
 
-export const toLowerCase = (str: string) => str.toLowerCase();
+export function toLowerCase(str: string) { return str.toLowerCase() };
 
-export const dashToPascalCase = (str: string) =>
-  toLowerCase(str)
-    .split('-')
-    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
-    .join('');
+export function dashToPascalCase(str: string) {
+  return toLowerCase(str)
+  .split('-')
+  .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
+  .join('');
+}
 
 export function sortBy<T>(array: T[], prop: (item: T) => string) {
   return array.slice().sort((a, b) => {

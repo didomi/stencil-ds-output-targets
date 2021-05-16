@@ -1,6 +1,7 @@
 import { EventEmitter } from '@angular/core';
 
-export const proxyInputs = (Cmp: any, inputs: string[]) => {
+// tslint:disable-next-line: only-arrow-functions
+export function proxyInputs(Cmp: any, inputs: string[]) {
   const Prototype = Cmp.prototype;
   inputs.forEach((item) => {
     Object.defineProperty(Prototype, item, {
@@ -14,7 +15,8 @@ export const proxyInputs = (Cmp: any, inputs: string[]) => {
   });
 };
 
-export const proxyMethods = (Cmp: any, methods: string[]) => {
+// tslint:disable-next-line: only-arrow-functions
+export function proxyMethods(Cmp: any, methods: string[]) {
   const Prototype = Cmp.prototype;
   methods.forEach((methodName) => {
     Prototype[methodName] = function () {
@@ -24,7 +26,8 @@ export const proxyMethods = (Cmp: any, methods: string[]) => {
   });
 };
 
-export const proxyOutputs = (instance: any, el: any, events: string[]) => {
+// tslint:disable-next-line: only-arrow-functions
+export function proxyOutputs(instance: any, el: any, events: string[]) {
   events.forEach((eventName) => (instance[eventName] = new EventEmitter()));
 };
 
