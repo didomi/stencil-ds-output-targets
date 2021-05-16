@@ -5,7 +5,9 @@ import type { PackageJSON } from './types';
 
 const readFile = promisify(fs.readFile);
 
-export function toLowerCase(str: string) { return str.toLowerCase() };
+export function toLowerCase(str: string) {
+  return str.toLowerCase()
+};
 
 export function dashToPascalCase(str: string) {
   return toLowerCase(str)
